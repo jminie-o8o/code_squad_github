@@ -12,6 +12,9 @@ public class MapConvert {
         for (int i = 0; i < map.length; i++) {
             String[] inArr = map[i];
             for (int j = 0; j < row; j++) {
+                if (inArr[j] == " ") {
+                    convertedMap[i][j] = 5;
+                }
                 if (inArr[j] == "#") {
                     convertedMap[i][j] = 0;
                 }
