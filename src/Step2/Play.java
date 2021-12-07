@@ -1,94 +1,54 @@
 package Step2;
 
+import Step1.MapConvert;
+import Step1.MapList;
+
+import java.util.List;
+
 public class Play {
-    MapReconvert reconvert = new MapReconvert();
+    Show show = new Show();
+    Move move = new Move();
+    MapList mapList = new MapList();
+    MapConvert mapConvert = new MapConvert();
+    MapReconvert mapReconvert = new MapReconvert();
 
-    public String[][] moveRight(int[][] map){
-        for (int i = 0; i < map.length; i++) {
-            int[] inArr = map[i];
-            for (int j = 0; j < inArr.length; j++) {
-                if(inArr[j] == 3 && inArr[j+1] == 5){
-                    map[i][j] = map[i][j+1]; // 2단계는 어차피 공백으로만 이동하니 map[i][j] = 5; 라고 둬도 무방
-                    map[i][j+1] = 3;
-                    System.out.println("D: 오른쪽으로 이동합니다.");
-                    System.out.println();
-                    break;
-                }if(inArr[j] == 3 && inArr[j+1] != 5){
-                    System.out.println("(경고!) 해당 명령을 수행할 수 없습니다!");
-                    System.out.println();
-                    break;
-                }
+    public String[][] playGame(List<String> input, int[][] secondStage){
+        int[][] map = secondStage;
+        String[][] finalMap = mapReconvert.reconvert(map);
+        for (int i = 0; i < input.size(); i++) {
+            char command = input.get(i).charAt(0);
+            if(command == 'a'){
+                finalMap =  move.moveLeft(secondStage);
+                show.showMap(finalMap);
+                System.out.println();
+                continue;
+            }
+            if(command == 'd'){
+                finalMap =  move.moveRight(secondStage);
+                show.showMap(finalMap);
+                System.out.println();
+                continue;
+            }
+            if(command == 'w'){
+                finalMap =  move.moveUp(secondStage);
+                show.showMap(finalMap);
+                System.out.println();
+                continue;
+            }
+            if(command == 's'){
+                finalMap =  move.moveDown(secondStage);
+                show.showMap(finalMap);
+                System.out.println();
+                continue;
+            } else {
+                char upper = Character.toUpperCase(command); // char 를 대문자로 바꿔서 출력
+                System.out.printf("%c: (경고!) 해당 명령을 수행할 수 없습니다.\n", upper);
+                System.out.println();
+                show.showMap(finalMap);
+                System.out.println();
+                continue;
             }
         }
-        // 오른쪽 이동이 끝났으면 다시 int[][] 타입의 map 을 String[][] 으로 return 시켜준다.
-        String[][] moveRight = reconvert.reconvert(map);
-        return moveRight;
+        return finalMap;
     }
-
-    public String[][] moveLeft(int[][] map){
-        for (int i = 0; i < map.length; i++) {
-            int[] inArr = map[i];
-            for (int j = 0; j < inArr.length; j++) {
-                if(inArr[j] == 3 && inArr[j-1] == 5){
-                    map[i][j] = map[i][j-1];
-                    map[i][j-1] = 3;
-                    System.out.println("A: 왼쪽으로 이동합니다.");
-                    System.out.println();
-                    break;
-                }if(inArr[j] == 3 && inArr[j-1] != 5){
-                    System.out.println("(경고!) 해당 명령을 수행할 수 없습니다!");
-                    System.out.println();
-                    break;
-                }
-            }
-        }
-        // 왼쪽 이동이 끝났으면 다시 int[][] 타입의 map 을 String[][] 으로 return 시켜준다.
-        String[][] moveLeft = reconvert.reconvert(map);
-        return moveLeft;
-    }
-
-    public String[][] moveUp(int[][] map){
-        for (int i = 0; i < map.length; i++) {
-            int[] inArr = map[i];
-            for (int j = 0; j < inArr.length; j++) {
-                if(inArr[j] == 3 && map[i-1][j] == 5){
-                    map[i][j] = map[i-1][j];
-                    map[i-1][j] = 3;
-                    System.out.println("W: 위쪽으로 이동합니다.");
-                    System.out.println();
-                    break;
-                }if(inArr[j] == 3 && map[i-1][j] != 5){
-                    System.out.println("(경고!) 해당 명령을 수행할 수 없습니다!");
-                    System.out.println();
-                    break;
-                }
-            }
-        }
-        // 왼쪽 이동이 끝났으면 다시 int[][] 타입의 map 을 String[][] 으로 return 시켜준다.
-        String[][] moveUp = reconvert.reconvert(map);
-        return moveUp;
-    }
-
-    public String[][] moveDown(int[][] map){
-        for (int i = 0; i < map.length; i++) {
-            int[] inArr = map[i];
-            for (int j = 0; j < inArr.length; j++) {
-                if(inArr[j] == 3 && map[i+1][j] == 5){
-                    map[i][j] = map[i+1][j];
-                    map[i+1][j] = 3;
-                    System.out.println("W: 위쪽으로 이동합니다.");
-                    System.out.println();
-                    break;
-                }if(inArr[j] == 3 && map[i+1][j] != 5){
-                    System.out.println("(경고!) 해당 명령을 수행할 수 없습니다!");
-                    System.out.println();
-                    break;
-                }
-            }
-        }
-        // 왼쪽 이동이 끝났으면 다시 int[][] 타입의 map 을 String[][] 으로 return 시켜준다.
-        String[][] moveDown = reconvert.reconvert(map);
-        return moveDown;
-    }
-
 }
