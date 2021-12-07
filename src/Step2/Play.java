@@ -8,8 +8,6 @@ import java.util.List;
 public class Play {
     Show show = new Show();
     Move move = new Move();
-    MapList mapList = new MapList();
-    MapConvert mapConvert = new MapConvert();
     MapReconvert mapReconvert = new MapReconvert();
 
     public String[][] playGame(List<String> input, int[][] secondStage){
