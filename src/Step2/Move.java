@@ -98,5 +98,4 @@ public class Move {
         String[][] moveDown = reconvert.reconvert(map);
         return moveDown;
     }
-
 }
