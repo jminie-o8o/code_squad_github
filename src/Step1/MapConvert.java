@@ -1,3 +1,5 @@
+package Step1;
+
 public class MapConvert {
 
     public int[][] convert(String[][] map) {
@@ -7,6 +9,7 @@ public class MapConvert {
             row = inArr.length;
         }
 
+        // 여기서 map.length 는 세로길이 row 는 가로길이
         int[][] convertedMap = new int[map.length][row];
 
         for (int i = 0; i < map.length; i++) {
