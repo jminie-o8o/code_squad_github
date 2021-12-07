@@ -1,3 +1,5 @@
+package Step1;
+
 public class MapInfo {
     MapList mapList = new MapList();
     MapConvert mapConvert = new MapConvert();

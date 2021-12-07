@@ -1,3 +1,5 @@
+package Step1;
+
 public class MapList {
 
     public String[][] stage1() {
