@@ -13,14 +13,23 @@ public class Main2 {
         Move move = new Move();
         Input input = new Input();
         Play play = new Play();
+        PlayAgain playAgain = new PlayAgain();
 
 //        // MapList 에 있는 String[][] 타입의 stage2를 가져와서 int[][] 타입으로 전환시켜 준다.
 //        int[][] secondStage = mapConvert.convert(mapList.stage2());
 //        String[][] test = move.moveDown(secondStage);
 //        show.showMap(test);
 
+//        int[][] secondStage = mapConvert.convert(mapList.stage2());
+//        List<String> command = input.input();
+//        play.playGame(command, secondStage);
+
         int[][] secondStage = mapConvert.convert(mapList.stage2());
-        List<String> command = input.input();
-        play.playGame(command, secondStage);
+        boolean again = true;
+        while (again){
+            List<String> command = input.input();
+            play.playGame(command, secondStage);
+            again = playAgain.again();
+        }
     }
 }
