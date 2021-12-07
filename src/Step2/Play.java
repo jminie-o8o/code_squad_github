@@ -1,8 +1,5 @@
 package Step2;
 
-import Step1.MapConvert;
-import Step1.MapList;
-
 import java.util.List;
 
 public class Play {

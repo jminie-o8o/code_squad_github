@@ -1,7 +1,7 @@
 # 구현과정 상세 설명
 
 ## 1단계
-- Step1.MapList 클라스 작성
+- MapList 클라스 작성
     - String[ ][ ] 즉 2차원 배열을 이용하여 Map의 형태를 갖춰준다.
     - 이때 처음에는 char 형태로 2차원 배열을 만들었지만 char 타입은 null 을 받을 수 없어 String 으로 변경했다.
     - 하지만 결국 null 이 아닌 공백문자열로 구현했으므로 char 로 하든 String 으로 하든 상관없었을 것 같다.
@@ -9,7 +9,7 @@
       </br>
       </br>
 
-**Step1.MapList 클라스**
+**MapList 클라스**
 ```java
 public class MapList {
 
@@ -37,7 +37,7 @@ public class MapList {
 }
 ```
 
-- Step1.MapConvert 클라스 작성
+- MapConvert 클라스 작성
 
 |기호|의미|저장값|
 |---|---|---|
@@ -58,7 +58,7 @@ public class MapList {
     - [출력결과물](https://user-images.githubusercontent.com/79504043/144867123-aa9f7b0d-9b51-487e-bffd-34a52fe66570.png)
 
 
-**Step1.MapConvert 클라스**
+**MapConvert 클라스**
 ```java
 public class MapConvert {
 
@@ -110,11 +110,11 @@ public class MapConvert {
 - 위 4개와 같이 메서드를 분리해서 구현
 
 **이슈**
-- Step1.Main 에서 Stage 이름을 직접 찍어주는 것이 아니라 Step1.MapList 안에 글로벌필드로 Stage의 이름 (ex: Stage 1, Stage 2) 등을 넣어
+- Main 에서 Stage 이름을 직접 찍어주는 것이 아니라 Step1.MapList 안에 글로벌필드로 Stage의 이름 (ex: Stage 1, Stage 2) 등을 넣어
   메서드에서 뽑아내도록 구현하고 싶었으나 계속 막혀서 실패... 추후 리팩토링
 
 
-**Step1.MapInfo 클라스**
+**MapInfo 클라스**
 
 ```java
 import Step1.MapConvert;
@@ -195,8 +195,9 @@ public class MapInfo {
 }
 ```
 
-- Step1.Main 클라스 작성 및 결과 출력
+- Main 클라스 작성 및 결과 출력
 
+**Main 클라스**
 ```java
 import Step1.MapInfo;
 import Step1.MapList;
@@ -221,6 +222,3 @@ public class Main {
     - [결과 출력 사진](https://user-images.githubusercontent.com/79504043/144847198-f1795a7c-e99c-43e1-8ffa-dfbf846e86e4.png)
 
 ___
-## 2단계
-
-## 3단계
