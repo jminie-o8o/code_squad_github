@@ -24,6 +24,10 @@ public class Main2 {
             List<String> command = input.input();
             play.playGame(command, secondStage);
             again = playAgain.again();
+            if(again == true){
+                secondStage = mapConvert.convert(mapList.stage2()); // 경기를 재시작하면 Map을 초기화 해준다.
+                continue;
+            }
         }
     }
 }
