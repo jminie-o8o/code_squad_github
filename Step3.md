@@ -370,7 +370,7 @@ public class Main3 {
 <br>
 
 - **소코반 시연 영상**
-  - [시연 영상 보러가기](https://user-images.githubusercontent.com/79504043/145201529-714d7847-3f22-466f-addb-57cad3ac0f20.mp4)
+  - [시연 영상](https://user-images.githubusercontent.com/79504043/145201529-714d7847-3f22-466f-addb-57cad3ac0f20.mp4)
 
 
 ___
