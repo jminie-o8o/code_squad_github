@@ -2,9 +2,11 @@ package Step3;
 
 import Step2.MapReconvert;
 
+import static Step3.MoveRight.onTheHole;
+
+
 public class MoveDown {
     MapReconvert reconvert = new MapReconvert();
-    int onTheHole = 0;
 
     public String[][] moveDown(int[][] map){
         Loop1:
