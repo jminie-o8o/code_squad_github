@@ -241,7 +241,7 @@ import java.util.List;
 
 public class Play {
     Show show = new Show();
-    Move move = new Move();
+    Move finalMove = new Move();
     MapReconvert mapReconvert = new MapReconvert();
 
     public String[][] playGame(List<String> input, int[][] secondStage){
@@ -250,25 +250,25 @@ public class Play {
         for (int i = 0; i < input.size(); i++) {
             char command = input.get(i).charAt(0);
             if(command == 'a'){
-                finalMap =  move.moveLeft(secondStage);
+                finalMap =  finalMove.moveLeft(secondStage);
                 show.showMap(finalMap);
                 System.out.println();
                 continue;
             }
             if(command == 'd'){
-                finalMap =  move.moveRight(secondStage);
+                finalMap =  finalMove.moveRight(secondStage);
                 show.showMap(finalMap);
                 System.out.println();
                 continue;
             }
             if(command == 'w'){
-                finalMap =  move.moveUp(secondStage);
+                finalMap =  finalMove.moveUp(secondStage);
                 show.showMap(finalMap);
                 System.out.println();
                 continue;
             }
             if(command == 's'){
-                finalMap =  move.moveDown(secondStage);
+                finalMap =  finalMove.moveDown(secondStage);
                 show.showMap(finalMap);
                 System.out.println();
                 continue;
