@@ -7,8 +7,6 @@ import Step2.Play;
 import Step2.PlayAgain;
 import Step2.Show;
 
-import java.util.List;
-
 public class Main3 {
     public static void main(String[] args) {
         MapList mapList = new MapList();
@@ -17,10 +15,10 @@ public class Main3 {
         Play play = new Play();
         Show show = new Show();
         PlayAgain playAgain = new PlayAgain();
-        Move move = new Move();
+        FinalMove finalMove = new FinalMove();
 
         int[][] secondStage = mapConvert.convert(mapList.stage2());
-        String[][] test = move.moveDown(secondStage);
+        String[][] test = finalMove.moveDown(secondStage);
         show.showMap(test);
     }
 }

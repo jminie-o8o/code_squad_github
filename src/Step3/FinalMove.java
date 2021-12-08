@@ -2,7 +2,7 @@ package Step3;
 
 import Step2.MapReconvert;
 
-public class Move {
+public class FinalMove {
     MapReconvert reconvert = new MapReconvert();
     int onTheHole = 0; // location 이 1이라면 사람이 구멍 위에 있는 상태이다.
 
