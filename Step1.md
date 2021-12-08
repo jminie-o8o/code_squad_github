@@ -37,6 +37,8 @@ public class MapList {
 }
 ```
 
+<br>
+
 - MapConvert 클라스 작성
 
 |기호|의미|저장값|
@@ -101,6 +103,8 @@ public class MapConvert {
 }
 
 ```
+
+<br>
 
 - Mapinfo 클라스 작성
     - 구멍의 개수를 구하는 메서드
@@ -194,6 +198,8 @@ public class MapInfo {
     }
 }
 ```
+
+<br>
 
 - Main 클라스 작성 및 결과 출력
 
