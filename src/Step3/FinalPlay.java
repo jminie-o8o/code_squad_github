@@ -7,8 +7,11 @@ import java.util.List;
 
 public class FinalPlay {
     Show show = new Show();
-    FinalMove finalMove = new FinalMove();
     MapReconvert mapReconvert = new MapReconvert();
+    MoveRight moveRight = new MoveRight();
+    MoveLeft moveLeft = new MoveLeft();
+    MoveUp moveUp = new MoveUp();
+    MoveDown moveDown = new MoveDown();
 
     public String[][] playGame(List<String> input, int[][] stage){
         int[][] map = stage;
@@ -16,25 +19,25 @@ public class FinalPlay {
         for (int i = 0; i < input.size(); i++) {
             char command = input.get(i).charAt(0);
             if(command == 'd'){
-                finalMap = finalMove.moveRight(stage);
+                finalMap = moveRight.moveRight(stage);
                 show.showMap(finalMap);
                 System.out.println();
                 continue;
             }
             if(command == 'a'){
-                finalMap = finalMove.moveLeft(stage);
+                finalMap = moveLeft.moveLeft(stage);
                 show.showMap(finalMap);
                 System.out.println();
                 continue;
             }
             if(command == 'w'){
-                finalMap = finalMove.moveUp(stage);
+                finalMap = moveUp.moveUp(stage);
                 show.showMap(finalMap);
                 System.out.println();
                 continue;
             }
             if(command == 's'){
-                finalMap = finalMove.moveDown(stage);
+                finalMap = moveDown.moveDown(stage);
                 show.showMap(finalMap);
                 System.out.println();
                 continue;

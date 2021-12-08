@@ -336,6 +336,7 @@ public class PlayAgain {
 - **Main2 클라스 작성**
   - 지금까지 구현한 클라스들을 모아 실제 동작을 수행하는 클라스이다.
   - boolean again = true; 를 지정해 게임의 재시작 여부를 PlayAgain 클라스로 동작할 수 있도록 하였다.
+  - 경기 재시작을 원할 경우 if문 안에 다시 secondStage 를 불러와서 Map 을 초기화 해준다. 
 
 **Main2 클라스**
 ```java
@@ -350,14 +351,23 @@ public class Main2 {
     MapConvert mapConvert = new MapConvert();
     Input input = new Input();
     Play play = new Play();
+    Show show = new Show();
     PlayAgain playAgain = new PlayAgain();
 
     int[][] secondStage = mapConvert.convert(mapList.stage2());
     boolean again = true;
     while (again){
+      System.out.println("Stage 2");
+      System.out.println();
+      show.showMap(mapList.stage2());
+      System.out.println();
       List<String> command = input.input();
       play.playGame(command, secondStage);
       again = playAgain.again();
+      if(again == true){
+        secondStage = mapConvert.convert(mapList.stage2()); // 경기를 재시작하면 Map을 초기화 해준다.
+        continue;
+      }
     }
   }
 }
