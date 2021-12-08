@@ -26,7 +26,7 @@ public class Input {
 }
 ```
 
-</br>
+<br>
 
 - **MapReconvert 클라스 작성**
   - 플레이어의 움직임을 구현하는 클라스를 작성하기 전에 우선 int 타입의 2차원 배열을 
@@ -71,7 +71,7 @@ public class MapReconvert {
 }
 ```
 
-</br>
+<br>
 
 - **Move 클라스 작성**
   - 상 하 좌 우 로 움직이는 4개의 메서드를 작성했다.
@@ -227,7 +227,7 @@ public class Move {
 }
 ```
 
-</br>
+<br>
 
 - **Play 클라스 작성**
   - Input 클라스에서 입력받은 리스트에 담긴 command 즉 입력을 보고 Move 클라스의 상하좌우 움직임이
@@ -286,7 +286,7 @@ public class Play {
 }
 ```
 
-</br>
+<br>
 
 - **Show 클라스 작성**
   - 매번 맵을 보여주기 위해 Main 클라스에서 String 타입의 2차원 배열을 2중 for 문으로 찍어 보여주었는데
@@ -306,7 +306,7 @@ public class Show {
 }
 ```
 
-</br>
+<br>
 
 - **PlayAgain 클라스 작성**
   - input 으로 입력받은 작업을 모두 수행한 뒤 게임을 다시 시작할지 말지를 선택하는 기능을 구현했다.
@@ -331,7 +331,7 @@ public class PlayAgain {
 }
 ```
 
-</br>
+<br>
 
 - **Main2 클라스 작성**
   - 지금까지 구현한 클라스들을 모아 실제 동작을 수행하는 클라스이다.

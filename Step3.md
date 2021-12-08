@@ -150,6 +150,8 @@ public class MoveRight {
 }
 ```
 
+<br>
+
 - **FinalPlay 클라스 작성**
   - 위에서 작성한 Move 관련 메서드들이 실제로 동작하는 클라스이다.
   - 입력값을 받아 움직임 동작을 수행하기 때문에 Step2의 Play 클라스와 거의 흡사하다.
@@ -210,6 +212,8 @@ public class FinalPlay {
 }
 ```
 
+<br>
+
 - **Check 클라스 작성**
   - 스테이지가 클리어 됐는지 확인하는 클라스이다.
   - 스테이지의 클리어 여부는 현재 맵에 o 즉 공이 존재하는가 여부로 판별하였다.
@@ -238,6 +242,8 @@ public class Check {
     }
 }
 ```
+
+<br>
 
 -**IntMapLists 클라스 및 StringMapLists 작성**
   - 결국 txt 파일에서 맵을 문자열로 전환하는 기능은 구현하지 못했기에 Step1 때 만들었던 MapList 에 Stage5 까지 직접 
@@ -296,6 +302,8 @@ public class StringMapLists {
   }
 }
 ```
+
+<br>
 
 - **Main3 클라스 작성**
   - 기능별로 나누어 놓았던 클라스들을 모아 실제 게임이 작동시키는 클라스이다.
@@ -358,6 +366,11 @@ public class Main3 {
     }
 }
 ```
+
+<br>
+
+- **소코반 시연 영상**
+  - [시연 영상 보러가기](https://user-images.githubusercontent.com/79504043/145201529-714d7847-3f22-466f-addb-57cad3ac0f20.mp4)
 
 
 ___
