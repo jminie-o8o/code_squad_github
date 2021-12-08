@@ -30,13 +30,12 @@ public class MapConvert {
                 if (inArr[j] == "P") {
                     convertedMap[i][j] = 3;
                 }
-                if (inArr[j] == "=") {
-                    convertedMap[i][j] = 4;
+                if (inArr[j] == "0") { // Step3 공과 구멍이 합쳐지는 부분 추가
+                    convertedMap[i][j] = 6;
                 }
             }
         }
         return convertedMap;
-
     }
 }
 

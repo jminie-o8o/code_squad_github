@@ -28,6 +28,9 @@ public class MapReconvert {
                 if (inArr[j] == 3){
                     reconvertedMap[i][j] = "P";
                 }
+                if (inArr[j] == 6){ // Step3 공과 구멍이 합쳐지는 부분 추가
+                    reconvertedMap[i][j] = "0";
+                }
             }
         }
         return reconvertedMap;
