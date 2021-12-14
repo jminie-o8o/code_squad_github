@@ -34,7 +34,7 @@ import Step2.MapReconvert;
 
 public class MoveRight {
     MapReconvert reconvert = new MapReconvert();
-    int onTheHole = 0; // location 이 1이라면 사람이 구멍 위에 있는 상태이다.
+    static int onTheHole = 0; // location 이 1이라면 사람이 구멍 위에 있는 상태이다.
 
     public String[][] moveRight(int[][] map){
         Loop1:
